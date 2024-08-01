@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Simple Coffee Shop</title>
+
+    <style>
+        /*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+  
+  /* Preferred box-sizing value */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* For images to not be able to exceed their container */
+  img {
+    max-width: 100%;
+  }
+  
+  /* Removes spacing between cells in tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  /* Revert the 'white-space' property for textarea elements on Safari */
+  textarea {
+    white-space: revert;
+  }
+
+
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .clearfix { display: inline-block; }
+  /* start commented backslash hack \*/
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+  /* close commented backslash hack */
+
+
+.page{
+    border: 4px solid rgb(138, 136, 136);
+    width: 100%;
+    height: 1024px;
+    min-width: 57%;
+}
+
+.topPane{
+    width: 100%;
+    height: 50px;
+    background-color:#3e2b1e ;
+    display: flex;
+    align-items: center;
+     
+}
+
+
+.topPaneLeft{
+    flex: 5;
+}
+
+.topPaneMiddle{
+    flex: 3;
+}
+
+.topPaneRight{
+   flex: 5;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.topPaneLogo{
+    height: 60px;
+    width: 60px;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+@keyframes example {
+  0%   {  left:0px; top:0px;}
+  25%  {  left:50px; top:0px;}
+  50%  {  left:50px; top:50px;}
+  75%  {  left:0px; top:50px;}
+  100% {  left:0px; top:0px;}
+}
+
+.middlPane{
+    width: 100%;
+   height: 400px;
+   display: flex;
+    
+}
+
+.middlePaneImg{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+ 
+ 
+.middlePaneImageItem{
+    
+    
+    height: 200px;
+    border: 2px solid rgb(175, 160, 160);
+    min-width:100px ;
+   
+}
+
+.middlePaneContent{
+    flex: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomPane{
+    width: 100%;
+    height: 179px;
+}
+
+li li {
+  list-style-type: circle;
+}
+
+  li {
+  list-style-type: square;
+}
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #6f4e37;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+
+ 
+
+    </style>
+</head>
+<body>
+<div class="page"> 
+    <div class="topPane">
+        <div class="topPaneLeft">
+            <h1 class="header">The coffe Shop</h1>
+            
+        </div> 
+        <div class="topPaneMiddle">
+            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjUcqRPrvLh762BuOIenYJ5J041QpoZn1BBg&s" alt="" class="topPaneLogo">
+
+        </div>
+        <div class="topPaneRight">
+            <div class="navBarItem1">Gift Card</div>
+            <div class="navBarItem2">About Us</div>
+            <div class="navBarItem3">Contact Us</div>
+
+        </div>
+        
+    </div>
+    <div class="middlPane">
+        <div class="middlePaneImg">
+           <div><img src="https://www.barniescoffee.com/cdn/shop/articles/bar-1869656_1920.jpg?v=1660683986" alt="" class="middlePaneImageItem"></div>  
+           <div> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeTu2tI8Zedt6SoCDP-aLUc3d-6DexEoBx56ljSqW9FtzWR_nnRux0WTzvE-gsaaMUNFI&usqp=CAU" alt="" class="middlePaneImageItem"></div>  
+           <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4ylBrNyL6gilzldKy_tY8o6g8gpTKtM1uYPqbNGb4brs2mVy0GveSve6Pqjp8Y50Nxs&usqp=CAU" alt="" class="middlePaneImageItem"></div>   
+           <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6X8gQIHJkNLcZw08pMhCm_jyHs_RwtyxnFVNW_l7N5k_cf4G9WMeaeWjhouDwj5UgUOE&usqp=CAU" alt="" class="middlePaneImageItem"></div>   
+        </div>
+        <div class="middlePaneContent">
+            
+           <div class="middlePaneContentOrderList">
+            <ul >
+                <li>Types of coffe:- 
+                    <ul> 
+                        <li>Espresso</li>
+                        <li>Americano</li>
+                        <li>Latte</li>
+                        <li>Cappuccino</li>
+                        <li>Macchiato</li>
+                        <li>Mocha</li>
+                        <li>Flat White</li>
+                        <li>Cold Brew</li>
+                        <li>Iced Coffee</li>
+                        <li>Nitro Coffee</li>
+                    </ul>
+                </li>
+            </ul>
+           </div>
+
+        </div>
+
+    </div>
+    <div class="bottomPane">
+        <h1>Coffee Shop Menu</h1>
+        <table>
+            <tr>
+                <th>Coffee</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Caffeine Content</th>
+            </tr>
+            <tr>
+                <td>Espresso</td>
+                <td>A strong and concentrated coffee made by forcing hot water through finely-ground coffee beans.</td>
+                <td>$2.50</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Americano</td>
+                <td>Espresso diluted with hot water, resulting in a coffee similar to drip coffee but with a richer flavor.</td>
+                <td>$3.00</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Latte</td>
+                <td>Espresso mixed with steamed milk and topped with a small amount of milk foam.</td>
+                <td>$4.00</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Cappuccino</td>
+                <td>Espresso with equal parts steamed milk and milk foam, often topped with a sprinkle of cocoa powder or cinnamon.</td>
+                <td>$4.00</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Macchiato</td>
+                <td>Espresso "stained" with a small amount of milk or milk foam.</td>
+                <td>$3.50</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Mocha</td>
+                <td>Espresso mixed with hot chocolate and steamed milk, often topped with whipped cream.</td>
+                <td>$4.50</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Flat White</td>
+                <td>Similar to a latte but with a higher coffee-to-milk ratio, resulting in a stronger coffee flavor.</td>
+                <td>$4.00</td>
+                <td>63 mg per shot</td>
+            </tr>
+            <tr>
+                <td>Cold Brew</td>
+                <td>Coffee brewed with cold water over an extended period, resulting in a smooth, less acidic coffee.</td>
+                <td>$4.50</td>
+                <td>200 mg per serving</td>
+            </tr>
+            <tr>
+                <td>Iced Coffee</td>
+                <td>Regular coffee brewed hot and then cooled down and served over ice.</td>
+                <td>$3.50</td>
+                <td>95 mg per cup</td>
+            </tr>
+            <tr>
+                <td>Nitro Coffee</td>
+                <td>Cold brew coffee infused with nitrogen gas, resulting in a creamy, frothy texture.</td>
+                <td>$5.00</td>
+                <td>200 mg per serving</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+    
+    
+    
+</body>
+</html>
