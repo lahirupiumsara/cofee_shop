@@ -62,14 +62,14 @@
 .page{
     border: 4px solid rgb(138, 136, 136);
     width: 100%;
-    height: 1024px;
+    height: auto;
     min-width: 57%;
 }
 
 .topPane{
     width: 100%;
     height: 50px;
-    background-color:#3e2b1e ;
+    background-color:#fd9e5d ;
     display: flex;
     align-items: center;
      
@@ -78,6 +78,19 @@
 
 .topPaneLeft{
     flex: 5;
+    
+}
+
+.header{
+     font-family: cursive ;
+     font-size: 30px;
+     font-weight: bold;
+     cursor: pointer;
+
+}
+
+.header:hover{
+    color: #5f5c5c;
 }
 
 .topPaneMiddle{
@@ -88,18 +101,30 @@
    flex: 5;
    display: flex;
    align-items: center;
-   justify-content: space-around;
+   justify-content: center;
+   font-family: cursive ;
+   font-size: 18px;
+}
+
+.navBarItem1{
+    margin: 20px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(21, 158, 103);
+    text-decoration: underline;
 }
 
 .topPaneLogo{
-    height: 60px;
-    width: 60px;
-    border: 3px solid black;
-    border-radius: 50%;
-    position: relative;
-  animation-name: example;
-  animation-duration: 4s;
-  animation-delay: 2s;
+height: 60px;
+width: 60px;
+border: 3px solid black;
+border-radius: 50%;
+position: relative;
+animation-name: example;
+animation-duration: 4s;
+animation-delay: 2s;
 }
 
 @keyframes example {
@@ -142,11 +167,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: cursive;
+    font-size: 19px;
 }
 
 .bottomPane{
     width: 100%;
-    height: 179px;
+    height: auto;
+    font-family:  fangsong;
+}
+
+.bottomMenu{
+    font-size: 25px;
+    font-weight: bold;
 }
 
 li li {
@@ -186,7 +219,8 @@ table {
 <div class="page"> 
     <div class="topPane">
         <div class="topPaneLeft">
-            <h1 class="header">The coffe Shop</h1>
+            <h1 class="header" onclick="myFunction()">SL coffe Shop</h1>
+         
             
         </div> 
         <div class="topPaneMiddle">
@@ -194,10 +228,10 @@ table {
 
         </div>
         <div class="topPaneRight">
-            <div class="navBarItem1">Gift Card</div>
-            <div class="navBarItem2">About Us</div>
-            <div class="navBarItem3">Contact Us</div>
-
+            <div class="navBarItem1"><a href="https://www.google.com/search?q=coffee+shop+gift+cards&rlz=1C1JJTC_enLK1111LK1111&oq=coffe+shop+gif&gs_lcrp=EgZjaHJvbWUqCQgBEAAYChiABDIGCAAQRRg5MgkIARAAGAoYgAQyCQgCEAAYChiABDIJCAMQABgKGIAEMgkIBBAAGAoYgAQyCQgFEAAYChiABDIJCAYQABgKGIAEMgkIBxAAGAoYgAQyCQgIEAAYChiABDIJCAkQABgKGIAE0gEJMjUyNDRqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">Gift Card &gt</a></div>
+            <div class="navBarItem1"><a href="https://www.chsglobe.com/44148/features/the-importance-of-coffee-shops/">About Us &gt</a></div>
+            <div class="navBarItem1"><a href="https://www.google.com/search?q=coffee+shop+contact+us&sca_esv=9267af3241730e66&rlz=1C1JJTC_enLK1111LK1111&sxsrf=ADLYWIKYpvP-LCHh3_BMbYQ24sADH0bgvQ%3A1722608777412&ei=ieysZpDdGM3l4-EP-6HqiA4&oq=+coffee+shop+contact+&gs_lp=Egxnd3Mtd2l6LXNlcnAiFSBjb2ZmZWUgc2hvcCBjb250YWN0ICoCCAEyBRAAGIAEMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMggQABgWGB4YD0iNY1CQCFivK3ABeACQAQCYAfgCoAG0GqoBBTItOS4zuAEDyAEA-AEBmAIMoALzGMICChAAGLADGNYEGEfCAg0QABiABBiwAxhDGIoFwgIKECMYgAQYJxiKBcICChAAGIAEGEMYigXCAgYQABgHGB7CAgsQABiABBiSAxiKBcICDRAAGIAEGEMYyQMYigXCAgsQABiABBiRAhiKBcICBBAjGCfCAggQABiABBiSA8ICCxAuGIAEGMcBGK8BwgIHEAAYgAQYCsICCxAAGIAEGIYDGIoFmAMAiAYBkAYKkgcHMS4wLjguM6AH8FY&sclient=gws-wiz-serp"> Contact Us &gt </a></div>
+             
         </div>
         
     </div>
@@ -210,7 +244,8 @@ table {
         </div>
         <div class="middlePaneContent">
             
-           <div class="middlePaneContentOrderList">
+            
+            
             <ul >
                 <li>Types of coffe:- 
                     <ul> 
@@ -233,7 +268,7 @@ table {
 
     </div>
     <div class="bottomPane">
-        <h1>Coffee Shop Menu</h1>
+        <h1 class="bottomMenu">Coffee Shop Menu</h1>
         <table>
             <tr>
                 <th>Coffee</th>
@@ -305,6 +340,14 @@ table {
     </div>
 </div>
 
+
+
+<script>
+  
+function myFunction() {
+  alert("Wellcome our SL coffee shop!");
+}
+</script>
 
     
     
